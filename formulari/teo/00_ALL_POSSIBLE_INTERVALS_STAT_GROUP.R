@@ -72,6 +72,10 @@ x.T2 < cfr.fisher
 # Compute the p-value
 P <- 1-pf(x.T2*(n-p)/((n-1)*p), p, n-p)
 P
+
+plot(x,pch=19)
+ellipse(mu0, shape=x.cov/n, sqrt(cfr.fisher), col = 'blue', center.pch = 16)
+points(x.mean[1], x.mean[2], pch = 16, col ='red', cex = 1.5)
                 
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
